@@ -1,12 +1,8 @@
-# Hide all build related node files.
 app/.sass-cache/*
-app/node-webkit/node_modules/*
+app/node_modules/*
 app/node-webkit/app/assets/css/*
-app/node-webkit/app/assets/js/contact/*
+app/node-webkit/app/assets/js/concat/*
 app/node-webkit/app/assets/js/build/*
-
-# Also hide the node-webkit binaries from
-# the working directory
 app/node-webkit/locales/*
 app/node-webkit/icudtl.dat
 app/node-webkit/libffmpegsumo.so

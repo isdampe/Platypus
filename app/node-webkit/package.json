@@ -15,10 +15,5 @@
     "min_width": 600,
     "min_height": 500,
     "show": false
-  },
-  "maintainers":[ {
-     "name": "Richard Denton",
-     "email": "isdampe@gmail.com",
-     "web": "http://richarddenton.com",
-  }]
+  }
 }
