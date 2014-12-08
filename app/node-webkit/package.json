@@ -1,0 +1,24 @@
+{
+  "main": "app/platypus.html",
+  "name": "platypus-app",
+  "description": "Platypus-app project management",
+  "version": "0.1.0",
+  "keywords": [ "demo", "node-webkit" ],
+  "window": {
+    "title": "Platypus",
+    "//": "icon:link.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 1400,
+    "height": 800,
+    "position": "center",
+    "min_width": 600,
+    "min_height": 500,
+    "show": false
+  },
+  "maintainers":[ {
+     "name": "Richard Denton",
+     "email": "isdampe@gmail.com",
+     "web": "http://richarddenton.com",
+  }]
+}
