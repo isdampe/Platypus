@@ -37,13 +37,16 @@
     //First up, generate a list of files in the directory.
     var tmpModules = fs.readdirSync( this.config.module_dir );
     for ( i=0; i<tmpModules.length; i++ ) {
+      //Fix this.
+      //Needs to check if valid module.
+      //File should be *.module.js
       this.injectModule( "modules/" + tmpModules[i] );
     }
 
   }
 
   /**
-   * Loads a module into Platypus.
+   * Injects a module into Platypus.
    * @param {string} file - Direct path to module file.
    */
   this.injectModule = function(file) {
@@ -58,6 +61,26 @@
 
     //Inject the script element.
     document.getElementById("platypus-modules").appendChild(script);
+
+  }
+
+  /**
+   * Loads a module into Platypus memory.
+   * @param {json} moduleObject - The module object for the module
+   */
+  this.loadModule = function(moduleObject) {
+
+    var moduleId = this.modules.length;
+
+    //Set the object into the buffer.
+    this.modules[moduleId].object = moduleObject;
+    //Set the config defaults into buffer.
+    this.modules[moduleId].config = {};
+
+
+    //We should now inject stylesheets that are associated with this modules.
+
+    console.log("Added new module to buffer, " + moduleObject.name );
 
   }
 
