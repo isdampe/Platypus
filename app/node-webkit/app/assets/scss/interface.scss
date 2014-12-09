@@ -8,9 +8,89 @@ body {
 
 .project-bar {
   position: fixed;
-  min-width: 300px;
+  min-width: 440px;
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   background: $grey1;
+  -webkit-user-select: none;
+
+  * {
+  	cursor: default;
+  }
+
+  nav {
+  	height: 90px;
+  	overflow: hidden;
+  	background: #333;
+  	border-bottom: 2px solid #242424;
+
+  	a {
+  		color: #b8b8b8;
+  		text-decoration: none;
+  		display: block;
+  		font-size: 54px;
+  		width: 90px;
+  		height: 90px;
+  		text-align: center;
+  		line-height: 90px;
+  		transition: 0.2s;
+  	}
+  	a:hover {
+  		background: #444;
+  	}
+  }
+
+  ul.project-list {
+  	margin: 0;
+  	padding: 0;
+
+  	h2 {
+  		font-weight: 400;
+  		margin: 0;
+  		color: #d7d7d7;
+  		font-size: 24px;
+  	}
+
+  	.cap {
+  		color: #828282;
+  		font-size: 18px;
+  	}
+
+  }
+
+  li {
+  	display: block;
+  	position: relative;
+  	list-style-type: none;
+  	width: 100%;
+  	height: 115px;
+  	box-sizing: border-box;
+  	padding: 36px;
+  	border-bottom: 2px solid #242424;
+  	border-top: 2px solid #4e4e4e;
+
+  	.arrow {
+  		position: absolute;
+  		top: 42px;
+  		right: 28px;
+  		font-size: 32px;
+  		color: #d7d7d7;
+  	}
+  }
+  li:first-of-type {
+  	border-top: none;
+  }
+
+  li.active {
+  	background: #596887;
+
+  	h2 {
+  		color: #fff;
+  	}
+
+  	.cap {
+  		color: #a9c0e7;
+  	}
+  }
 }
