@@ -8,12 +8,12 @@ body {
 
 .project-bar {
   position: fixed;
-  min-width: 440px;
+	width: 440px;
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  z-index: 99;
   background: $grey1;
-  -webkit-user-select: none;
+  -webkit-user-select: none;  
+  border-right: 2px solid #242424;
 
   * {
   	cursor: default;
@@ -69,6 +69,7 @@ body {
   	padding: 36px;
   	border-bottom: 2px solid #242424;
   	border-top: 2px solid #4e4e4e;
+  	border-right: 2px solid #4e4e4e;
 
   	.arrow {
   		position: absolute;
@@ -93,4 +94,57 @@ body {
   		color: #a9c0e7;
   	}
   }
+}
+
+.current-project {
+	box-sizing: border-box;
+	color: #232323;
+	
+	.border {
+		padding: 40px 40px 40px 500px;
+		height: 100%;
+		box-sizing: border-box;
+		position: absolute;
+		width: 100%;
+	}
+
+	.edit {
+		position: absolute;
+		width: 53px;
+		height: 53px;
+		top: 40px;
+		right: 40px;
+		background: url("../media/edit.png") center center no-repeat;
+	}
+
+	h1 {
+		font-size: 32px;
+		font-weight: 400;
+		margin: 0 0 0.25em 0;
+	}
+	.date {
+		margin: 0;
+		font-size: 16px;
+		color: #595959;
+	}
+
+	.module-wrapper {
+
+		.module {
+			float: left;
+			width: 285px;
+			height: 285px;
+			background: black;
+			border-radius: 5px;
+			margin: 40px 40px 40px 0;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444444), color-stop(1, #252525));
+			border: 2px solid #000;
+		}
+
+		.active {
+
+		}
+
+	}
+
 }
