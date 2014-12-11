@@ -12,7 +12,7 @@ body {
   height: 100%;
   z-index: 99;
   background: $grey1;
-  -webkit-user-select: none;  
+  -webkit-user-select: none;
   border-right: 2px solid #242424;
 
   * {
@@ -70,6 +70,7 @@ body {
   	border-bottom: 2px solid #242424;
   	border-top: 2px solid #4e4e4e;
   	border-right: 2px solid #4e4e4e;
+    transition: 0.2s all;
 
   	.arrow {
   		position: absolute;
@@ -81,6 +82,9 @@ body {
   }
   li:first-of-type {
   	border-top: none;
+  }
+  li:hover {
+    background: #4c4c4c;
   }
 
   li.active {
@@ -99,7 +103,7 @@ body {
 .current-project {
 	box-sizing: border-box;
 	color: #232323;
-	
+
 	.border {
 		padding: 40px 40px 40px 500px;
 		height: 100%;
@@ -132,6 +136,7 @@ body {
 
 		.module {
 			float: left;
+      position: relative;
 			width: 285px;
 			height: 285px;
 			background: black;
@@ -139,10 +144,30 @@ body {
 			margin: 40px 40px 40px 0;
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444444), color-stop(1, #252525));
 			border: 2px solid #000;
+      transition: 0.2s all;
+
+      .module-status {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        right: 16px;
+        top: 16px;
+        background: url("../media/module-inactive.svg") center center no-repeat;
+      }
 		}
 
-		.active {
+    .module:hover {
+      opacity: 0.8;
+    }
 
+		.module-active {
+      //Default active.
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #53b87d), color-stop(1, #00a171));
+      border-color: #009165;
+
+      .module-status {
+        background: url("../media/module-active.svg") center center no-repeat;
+      }
 		}
 
 	}
