@@ -137,14 +137,31 @@ body {
 		.module {
 			float: left;
       position: relative;
-			width: 285px;
-			height: 285px;
+			width: 270px;
+			height: 270px;
 			background: black;
+      box-sizing: border-box;
 			border-radius: 5px;
 			margin: 40px 40px 40px 0;
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444444), color-stop(1, #252525));
 			border: 2px solid #000;
       transition: 0.2s all;
+      box-shadow: 12px 12px 32px #888;
+      color: #fff;
+
+      .module-logo {
+        width: 80%;
+        height: 120px;
+        overflow: hidden;
+        margin: 65px auto 0 auto;
+        text-align: center;
+        opacity: 0.5;
+
+        img {
+          height: 115px;
+          width: auto;
+        }
+      }
 
       .module-status {
         position: absolute;
@@ -153,6 +170,21 @@ body {
         right: 16px;
         top: 16px;
         background: url("../media/module-inactive.svg") center center no-repeat;
+      }
+
+      .module-edit {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        font-size: 15px;
+        opacity: 0.8;
+        text-transform: uppercase;
+      }
+
+      .module-title {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0;
       }
 		}
 
@@ -164,10 +196,16 @@ body {
       //Default active.
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #53b87d), color-stop(1, #00a171));
       border-color: #009165;
+      color: #fff;
+
+      .module-logo {
+        opacity: 1;
+      }
 
       .module-status {
         background: url("../media/module-active.svg") center center no-repeat;
       }
+
 		}
 
 	}
